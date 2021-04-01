@@ -2,8 +2,7 @@ import { generateId } from '../Utils/GenerateId.js'
 
 
 export default class Stuff {
-  constructor(title, price, description, imgUrl, quantity, id = generateId()) {
-    this.id = id
+  constructor(title, price, description, imgUrl, quantity) {
     this.title = title
     this.price = price
     this.description = description

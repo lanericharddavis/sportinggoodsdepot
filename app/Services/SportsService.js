@@ -4,13 +4,20 @@ import { ProxyState } from "../AppState.js"
 
 class SportsService {
 
-  addToCart() {
+  // addToCart() {
 
+  // }
+
+  increaseMoney() {
+    ProxyState.ourMoney += 100
   }
 
-  ourMoney = 100
-  increaseMoney() {
-    ourMoney += 100
+  addToCart(itemIndex) {
+    let item = ProxyState.stuff[itemIndex]
+    debugger
+    ProxyState.cart.push = (new Stuff(item.title, item.price))
+    ProxyState.cart = ProxyState.cart
+    console.log("added to cart")
   }
 }
 
