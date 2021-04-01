@@ -1,4 +1,5 @@
 import Stuff from "./Models/Stuff.js"
+import Cart from "./Models/Cart.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 

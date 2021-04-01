@@ -5,15 +5,21 @@ import { ProxyState } from "../AppState.js"
 
 function _draw() {
   document.getElementById("moneyAvailable").innerHTML = ProxyState.ourMoney
+
+  let cart = ProxyState.cart;
+  let template = ''
+  cart.forEach(c => template += c.Template)
+  document.getElementById("cartItems").innerHTML = template
 }
+
 
 
 //PUBLIC
 export default class SportsController {
 
   constructor() {
-    // ProxyState.on("stuff", _addToCart)
-    // _addToCart()
+    ProxyState.on("cart", _draw)
+    addToCart()
     _draw()
   }
 
@@ -23,7 +29,7 @@ export default class SportsController {
     _draw()
   }
 
-  addToCart(item) {
+  addToCart(itemIndex) {
     sportsService.addToCart(itemIndex)
     _draw()
   }

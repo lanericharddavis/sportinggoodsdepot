@@ -14,7 +14,6 @@ class SportsService {
 
   addToCart(itemIndex) {
     let item = ProxyState.stuff[itemIndex]
-    debugger
     ProxyState.cart.push = (new Stuff(item.title, item.price))
     ProxyState.cart = ProxyState.cart
     console.log("added to cart")
